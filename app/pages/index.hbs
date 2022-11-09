@@ -3,27 +3,10 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Task Blaster - Sign Up</title>
+      <title>Task Blaster - Home</title>
   </head>
   {{!-- Add name somewhere on this page. I left it out for now since I dont know for sure what we're calling it --}}
   <body>
-    {{!-- Nav bar --}}
-    <nav class="flex justify-between items-center p-1 px-5 pt-3">
-      {{!-- Logo --}}
-      <img src="assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" />
-      <div class="flex space-x-12 items-center">
-        {{!-- Home and about us text --}}
-        <a href="#" class="text-xl font-semibold">About Us</a>
-      {{!-- Get Started Button --}}
-      <a href="/user/logout" class="bg-blue-400 text-white py-2 px-3 hover:shadow-lg shadow-xl rounded">
-        {{#if currentUser}}
-        Logout
-        {{else}}
-        Get Started</a>
-        {{/if}}
-      </a>
-      </div>  
-    </nav>
     {{!-- Text Section --}}
     <main class="flex justify-center relative space-x-20 py-20 mt-16 text-left flex-wrap bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
       <div class="absolute -left-56 -bottom-44 p-40 bg-transparent">

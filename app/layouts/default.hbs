@@ -7,6 +7,46 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body> 
+  {{!-- If logged in --}}
+  {{#if currentUser}}
+  {{!-- Nav bar --}}
+    <nav class="flex justify-between items-center p-1 px-5 pt-3">
+      {{!-- Logo --}}
+      <img src="assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" />
+      <div class="flex space-x-10 items-center">
+        {{!-- Home and about us text --}}
+        <a href="#" class="text-xl font-semibold group text-black transition duration-300">Home
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-signupBlue"></span>
+        </a>
+
+        <a href="/aboutus" class="text-xl font-semibold group text-black transition duration-300">About Us
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-signupBlue"></span>
+        </a>
+      {{!-- Get Started Button --}}
+        <a href="/user/logout" class="bg-black text-white py-2 px-4 hover:shadow-lg shadow-xl rounded">
+          Logout
+        </a>
+      </div>  
+    </nav>
+    {{!-- If logged out --}}
+    {{else}}
+    {{!-- Nav bar --}}
+    <nav class="flex justify-between items-center p-1 px-5 pt-3">
+      {{!-- Logo --}}
+      <img src="assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" />
+      <div class="flex space-x-10 items-center">
+        {{!-- Home and about us text --}}
+        <a href="#" class="text-xl font-semibold group text-black transition duration-300">About Us
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-signupBlue"></span>
+        </a>
+
+      {{!-- Get Started Button --}}
+        <a href="/user/signup" class="bg-blue-400 text-white py-2 px-3 hover:shadow-lg shadow-xl rounded">
+          Get Started
+        </a>
+      </div>  
+    </nav>
+    {{/if}}
   {{!-- 
   {{#if currentUser}}
     <a href="/user/logout">Logout</a>
