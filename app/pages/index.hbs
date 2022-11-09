@@ -9,10 +9,9 @@
   <body>
     {{!-- Text Section --}}
     <main class="flex justify-center relative space-x-20 py-20 mt-16 text-left flex-wrap bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
+      {{!-- White triangle on left side --}}
       <div class="absolute -left-56 -bottom-44 p-40 bg-transparent">
-        <div class="w-0 h-0 border-t-[320px] border-t-transparent border-l-[200px] border-l-white border-b-[320px] border-b-transparent">
-          
-        </div>
+        <div class="w-0 h-0 xl:border-t-[320px] xl:border-t-transparent xl:border-l-[180px] xl:border-l-white xl:border-b-[320px] xl:border-b-transparent"></div>
       </div>
       {{!-- Left side --}}
       <div class="flex flex-col items-start space-y-5 text-left">
@@ -29,16 +28,16 @@
         {{!-- Login & Signup Buttons --}}
         {{#if currentUser}}
         <section>
-          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 hover:shadow-sm shadow-xl rounded">
+          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 shadow-xl rounded">
             Go to your dashboard
           </a>
         </section>
         {{else}}
         <section class="space-x-12">
-          <a href="/user/login" class="bg-loginBlue text-white text-sm py-2 px-6 shadow-xl rounded">
+          <a href="/user/login" class="bg-loginBlue text-white text-sm py-2 px-6 shadow-lg rounded hover:bg-blue-500 transition-color duration-200">
             Login
           </a>
-          <a href="/user/signup" class="bg-signupBlue text-sm py-2 px-6 shadow-md rounded">
+          <a href="/user/signup" class="bg-zinc-200 text-sm py-2 px-6 shadow-md rounded hover:bg-zinc-100 transition-color duration-200">
             Sign up
           </a>
         </section>
