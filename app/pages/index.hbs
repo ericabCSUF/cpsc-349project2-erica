@@ -1,8 +1,66 @@
-<h1>Welcome to my app!</h1>
-<ul>
-  {{#if currentUser}}
-    <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
-  {{else}}
-    <li><a href="/user/signup">Sign up for an account</a></li>
-  {{/if}}
-</ul>
+<!doctype html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task Blaster - Home</title>
+  </head>
+  {{!-- Add name somewhere on this page. I left it out for now since I dont know for sure what we're calling it --}}
+  <body>
+    {{!-- Text Section --}}
+    <main class="flex justify-center relative space-x-20 py-20 mt-16 text-left flex-wrap bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
+      <div class="absolute -left-56 -bottom-44 p-40 bg-transparent">
+        <div class="w-0 h-0 border-t-[320px] border-t-transparent border-l-[200px] border-l-white border-b-[320px] border-b-transparent">
+          
+        </div>
+      </div>
+      {{!-- Left side --}}
+      <div class="flex flex-col items-start space-y-5 text-left">
+        <h1 class="text-4xl">Let's help you <span class="text-blue-400 font-bold">organize.</span></h1>
+        <p class="text-lg font-semibold pt-6">Modern tracking. Simply efficient.</p>
+        <ul class="list-disc pl-4 space-y-6 max-w-sm">
+          <li>Task Blaster allows you to easily keep track of all your daily tasks in one simple place.</li>
+          <li>Be your very best. Use Task Blaster and never go another day feeling unaccomplished again.</li>
+        </ul>
+        <p class="text-lg font-semibold">Easy to use.</p>
+        <ul class="list-disc pl-4 space-y-6 max-w-sm">
+          <li>Add and remove all your daily tasks in one place. And then click one button to add and remove items.</li>
+        </ul>
+        {{!-- Login & Signup Buttons --}}
+        {{#if currentUser}}
+        <section>
+          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 hover:shadow-sm shadow-xl rounded">
+            Go to your dashboard
+          </a>
+        </section>
+        {{else}}
+        <section class="space-x-12">
+          <a href="/user/login" class="bg-loginBlue text-white text-sm py-2 px-6 shadow-xl rounded">
+            Login
+          </a>
+          <a href="/user/signup" class="bg-signupBlue text-sm py-2 px-6 shadow-md rounded">
+            Sign up
+          </a>
+        </section>
+        {{/if}}
+      </div>
+      {{!-- Right side --}}
+      <div class="flex flex-col items-center space-y-5 text-left">
+        <span>
+        <h1 class="text-4xl">Not productive? We can fix that.</h1>
+        </span>
+        {{!-- Sample image --}}
+        <img src="assets/images/Sample image.png" class="shadow-lg rounded-t-md pt-2"alt="Task Blaster Logo" />
+      </div>
+    </main>
+    {{!-- Not sure if this code it supposed to go on the landing page. Does anyone know?
+    <ul>
+      {{#if currentUser}}
+        <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
+      {{else}}
+        <li><a href="/user/signup">Sign up for an account</a></li>
+      {{/if}}
+    </ul>
+    --}}
+  </body>
+</html> 

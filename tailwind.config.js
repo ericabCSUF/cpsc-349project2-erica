@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./app/**/*.hbs"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        loginBlue: '#005BB1',
+        signupBlue: '#BEE0FF'
+
+      }
+    },
   },
   plugins: [],
 }
