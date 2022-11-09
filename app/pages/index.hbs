@@ -16,19 +16,22 @@
         {{!-- Home and about us text --}}
         <a href="#" class="text-xl font-semibold">About Us</a>
       {{!-- Get Started Button --}}
-      <button class="bg-blue-400 text-white py-2 px-3 hover:shadow-lg shadow-xl rounded">
+      <a href="/user/logout" class="bg-blue-400 text-white py-2 px-3 hover:shadow-lg shadow-xl rounded">
         {{#if currentUser}}
-        <a href="/user/logout">Logout</a>
+        Logout
         {{else}}
-        <a href="/user/signup">Get Started</a>
+        Get Started</a>
         {{/if}}
-
-      </button>
+      </a>
       </div>  
     </nav>
     {{!-- Text Section --}}
-    <main class="flex justify-center space-x-20 py-20 mt-16 text-left flex-wrap bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
-      
+    <main class="flex justify-center relative space-x-20 py-20 mt-16 text-left flex-wrap bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
+      <div class="absolute -left-56 -bottom-44 p-40 bg-transparent">
+        <div class="w-0 h-0 border-t-[320px] border-t-transparent border-l-[200px] border-l-white border-b-[320px] border-b-transparent">
+          
+        </div>
+      </div>
       {{!-- Left side --}}
       <div class="flex flex-col items-start space-y-5 text-left">
         <h1 class="text-4xl">Let's help you <span class="text-blue-400 font-bold">organize.</span></h1>
@@ -44,18 +47,18 @@
         {{!-- Login & Signup Buttons --}}
         {{#if currentUser}}
         <section>
-          <button class="bg-black text-white text-sm justify-center py-2 px-6 hover:shadow-sm shadow-xl rounded">
-            <a href="/{{currentUser.details.username}}">Go to your dashboard</a>
+          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 hover:shadow-sm shadow-xl rounded">
+            Go to your dashboard
           </button>
         </section>
         {{else}}
         <section class="space-x-12">
-          <button class="bg-loginBlue text-white text-sm py-2 px-6 hover:shadow-sm shadow-xl rounded">
-            <a href="/user/login">Login</a>
-          </button>
-          <button class="bg-signupBlue text-sm py-2 px-6 hover:shadow-sm shadow-md rounded">
-            <a href="/user/signup">Sign up</a>
-          </button>
+          <a href="/user/login" class="bg-loginBlue text-white text-sm py-2 px-6 hover:shadow-sm shadow-xl rounded">
+            Login
+          </a>
+          <a href="/user/signup" class="bg-signupBlue text-sm py-2 px-6 hover:shadow-sm shadow-md rounded">
+            Sign up
+          </a>
         </section>
         {{/if}}
       </div>
