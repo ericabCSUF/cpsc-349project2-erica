@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">`
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Task Blaster - Sign Up</title>
     </head>
@@ -9,12 +9,29 @@
       {{!-- Nav bar --}}
       <nav class="container mx-auto p-6">
       </nav>
-        <form action="/user/signup" method="post">
-          <h1>Sign up</h1>
-          <input type="text" name="username" placeholder="Username" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <button type="submit">Sign up</button>
-        </form>
+      {{!Flex container that contains all the elements below the navigation}}
+      <div class="flex flex-wrap flex-col flex-auto justify-center h-screen items-center bg-gradient-to-r from-blue-100 to-cyan-100 -mt-16">
+        <h1 class="text-4xl text-center py-16">Let Task Blaster keep you on track!</h1>
+          <img src="/assets/images/tasks.jpg"/>
+            {{!--Form that allows user to sign up to the website--}}
+            <form action="/user/signup" method="post">
+              {{!--White flex container that only contains the account registration elements--}}
+              <div class="flex flex-col space-y-2 px-60 py-30 basis-70 bg-white w-95 p-6 rounded border-black border-2">
+                <h1 class="text-xl text-center py-6">Sign up below!</h1>
+                <label>Username</label>
+                <input class="w-full border-blue border-2 bg-blue rounded-md" type="text" name="username"  required>
+                <label>Email</label>
+                <input class="w-full border-blue border-2 bg-blue rounded-md" type="email" name="email"  required>
+                <label>Password</label>
+                <input class="w-full border-blue border-2 bg-blue rounded-md" type="password" name="password"  required>
+                {{!--Empty label to fix spacing issues--}}
+                <label></label>
+                <button 
+                  class="bg-loginBlue text-white text-md py-2  hover:bg-blue-500 transition-color duration-200 rounded-lg" 
+                  type="submit">Sign up
+                </button>
+              </div>     
+            </form>
+      </div>
     </body>
 </html>
