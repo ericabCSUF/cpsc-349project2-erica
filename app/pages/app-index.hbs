@@ -5,18 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1 class="text-blue-700">app-index</h1>
-        <div object>
-        <ul array key="todos" sortable>
-        {{#for todo in todos}}
-        <li 
-            object 
-            key:text="@innerText"
-            edit:text
-         >{{default todo.text "New todo item"}}</li>
-        {{/for}}
-        </ul>
-  <button new:todo>Add Todo</button>
-</div>
+        {{!-- Todo List --}}
+        <main class="flex flex-col mt-24 justify-center items-center ">
+            {{!-- Section 1 --}}
+            <section class="section-container" object>
+                <h1 class="section-number">Section 1</h1>
+                <div class="section-divider"></div>
+                <div class="space-y-6 "array key="todos1" sortable>
+                {{#for todo in todos1}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+            
+            {{!-- Section 2 --}}
+            <section class="section-container" object>
+                <h1 class="section-number">Section 2</h1>
+                <div class="section-divider"></div>
+                <div class="space-y-6 "array key="todos2" sortable>
+                {{#for todo in todos2}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+
+            {{!-- Section 3 --}}
+            <section class="section-container" object>
+                <h1 class="section-number">Section 3</h1>
+                <div class="section-divider"></div>
+                <div class="space-y-6 "array key="todos3" sortable>
+                {{#for todo in todos3}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+        </main> 
     </body>
 </html>
