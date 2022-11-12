@@ -6,8 +6,11 @@
         <title>Task Blaster - Main</title>    
     </head>
     <body>
+        <header class="flex items-center mt-3 ml-7">
+            <h1 class="text-4xl">Welcome, <span class="text-blue-400 font-bold">{{currentUser.details.username}}</span></h1>
+        </header>
         {{!-- Todo List --}}
-        <main class="flex flex-col mt-24 justify-center items-center ">
+        <main class="flex flex-col mt-8 justify-center items-center ">
             {{!-- Section 1 --}}
             <section class="section-container" object>
                 <h1 class="section-number">Section 1</h1>
