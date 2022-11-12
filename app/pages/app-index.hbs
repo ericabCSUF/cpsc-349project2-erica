@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Task Blaster - Main</title>    
     </head>
-    <body>
-        <header class="flex items-center mt-3 ml-7">
+    <body class="bg-gray-100">
+        <div class="h-2 bg-blue-200 rounded-t-full shadow-xl"></div>
+        <header class="flex items-center mt-8 ml-7">
+            {{!-- Display user's name at top left --}}
             <h1 class="text-4xl">Welcome, <span class="text-blue-400 font-bold">{{currentUser.details.username}}</span></h1>
         </header>
         {{!-- Todo List --}}
-        <main class="flex flex-col mt-8 justify-center items-center ">
+        <main class="flex flex-col mt-8 justify-center items-center md:flex-row md:items-start md:space-x-6 md:mt-11 md:px-4">
             {{!-- Section 1 --}}
             <section class="section-container" object>
                 <h1 class="section-number">Section 1</h1>
