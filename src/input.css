@@ -4,7 +4,7 @@
 
 @layer components {
     .todo-box{
-      @apply px-6 py-3 border border-black bg-white rounded-3xl;
+      @apply px-6 py-1 border border-black bg-white rounded-xl;
     }
   }
 
@@ -28,6 +28,15 @@
 
 @layer components {
     .section-container{
-      @apply px-6 py-6 mb-3 w-1/2 max-w-xl rounded-xl bg-gradient-to-r from-blue-100 to-cyan-100;
+      @apply px-6 py-6 mb-3 w-2/3 max-w-xl rounded-xl bg-gradient-to-r from-blue-100 to-cyan-100;
     }
   }
+
+@layer components {
+    .aboutus-container{
+      @apply flex justify-start px-14 shadow-xl space-x-40 text-left items-center bg-zinc-100;
+    }
+  }
+
+
+  

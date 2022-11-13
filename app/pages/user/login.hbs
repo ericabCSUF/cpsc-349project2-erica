@@ -9,13 +9,13 @@
     <body>
         {{!-- Text Section --}}
         <main class="flex items-center justify-center h-screen bg-gray-100">
-            <form>
+            <form action="/user/login" method="post">
                 <div class=" bg-white w-96 p-6 rounded shadow-sm">
                     
                     <h1 class="text-4xl"><span class="text-blue-400 font-bold">Login </span>To Your Task Blaster Account</h1>
                     
                     <div class="flex items-center justify-center mb-4">
-                        <img src="/assets/images/tasklogo.png" class="pt-8 hhh-32"/>
+                        <img src="/assets/images/tasklogo.jpg" class="pt-8 hhh-32"/>
                     </div>
                     
                     <label class="tex-gray-700">Username:</label>
@@ -38,7 +38,6 @@
                         type="submit"
                         class="bg-blue-500 w-full text-gray-100 py-w rounded hover:bg-blue-600 transition-colors">Log in
                     </button>
-
                 </div>  
             </form>
         </main>
