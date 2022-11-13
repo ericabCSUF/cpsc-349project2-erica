@@ -718,16 +718,16 @@ video {
   margin-bottom: 1rem;
 }
 
-.-mt-16 {
-  margin-top: -4rem;
-}
-
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
+}
+
+.list-item {
+  display: list-item;
 }
 
 .h-6 {
@@ -794,8 +794,16 @@ video {
   flex: 1 1 auto;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
 .list-disc {
   list-style-type: disc;
+}
+
+.list-none {
+  list-style-type: none;
 }
 
 .flex-col {
